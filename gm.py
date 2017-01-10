@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # ligin: gmasillogin123
 # pass: gmasillogin123gmasillogin123
-# export PATH=$PATH:/home/myroslav/gmail_login
+# export PATH=$PATH:$(pwd)
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -32,6 +32,7 @@ class Gm(unittest.TestCase):
 	sleep(5)
 	driver.get('https://mail.google.com/mail/u/1/#inbox')
 	sleep(15)
+	driver.quit()
     
     def is_element_present(self, how, what):
         try: self.driver.find_element(by=how, value=what)
